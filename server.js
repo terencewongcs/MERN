@@ -11,13 +11,13 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json()); // this is the body parser
 connectDb();
 
-// nextApp.prepare().then(()=>{
+nextApp.prepare().then(()=>{
 
-//     //app.use('/api/auth',require('/'))
-//     app.all("*",(req,res) => handle(req,res));
+    //app.use('/api/auth',require('/'))
+    app.all("*",(req,res) => handle(req,res));
 
-//     server.listen(PORT,err=>{
-//         if(err) throw err;
-//         console.log('Express server running on ${PORT}');
-//     });
-// });
+    server.listen(PORT,err=>{
+        if(err) throw err;
+        console.log('Express server running on ${PORT}');
+    });
+});
